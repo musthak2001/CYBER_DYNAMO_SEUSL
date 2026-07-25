@@ -12,6 +12,7 @@ import {
   Shield, Scaling, Ruler, Activity, FileText, CheckCircle, AlertTriangle, 
   XCircle, ArrowLeft, Download, Info, Layers, Eye, BarChart3, Database, ChevronRight, Clock
 } from 'lucide-react';
+import Chatbot from './Chatbot';
 
 interface DashboardStageProps {
   summary: WorkflowSummary;
@@ -217,48 +218,7 @@ export default function DashboardStage({ summary, onReset }: DashboardStageProps
                   className="max-w-full max-h-full object-contain pointer-events-none border border-tech-dark/20"
                 />
                 
-                {/* Responsive overlay SVG drawing crack centerline paths */}
-                <svg 
-                  className="absolute inset-0 w-full h-full pointer-events-none"
-                  viewBox="0 0 100 100" 
-                  preserveAspectRatio="none"
-                >
-                  {currentImage.cracks.map((crack, idx) => {
-                    if (crack.points.length === 0) return null;
-                    
-                    // Generate string for path line SVG
-                    const dPath = `M ${crack.points[0].x} ${crack.points[0].y} ` + 
-                                  crack.points.slice(1).map(p => `L ${p.x} ${p.y}`).join(' ');
- 
-                    const strokeWidthVal = Math.max(0.6, Math.min(3.5, crack.width / 6));
 
-                    return (
-                      <g key={idx}>
-                        {/* Underlay glow path */}
-                        <path 
-                          d={dPath} 
-                          fill="none" 
-                          stroke="#ef4444" 
-                          strokeWidth={strokeWidthVal * 2.5} 
-                          strokeOpacity="0.55"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="animate-pulse-ring"
-                        />
-                        {/* Main overlay path */}
-                        <path 
-                          d={dPath} 
-                          fill="none" 
-                          stroke="#ef4444" 
-                          strokeWidth={strokeWidthVal} 
-                          strokeOpacity="1"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </g>
-                    );
-                  })}
-                </svg>
 
                 {currentImage.cracks.length === 0 && (
                   <div className="absolute inset-0 bg-white/95 flex flex-col items-center justify-center text-tech-dark/50">
@@ -522,7 +482,9 @@ export default function DashboardStage({ summary, onReset }: DashboardStageProps
           </div>
         </div>
       </div>
-
+      
+      {/* AI Chatbot Widget */}
+      <Chatbot currentImage={currentImage} />
     </div>
   );
 }

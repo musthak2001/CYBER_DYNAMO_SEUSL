@@ -125,7 +125,7 @@ export default function App() {
       <footer className="border-t border-tech-dark py-4 text-center text-[10px] text-tech-dark/60 font-mono uppercase font-bold no-print bg-tech-accent/20" id="app-footer">
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-2">
           <span>SYSTEM STATUS: READY // CLOUD SYNCHRONIZATION: SECURE</span>
-          <span>© 2026 Structural Intelligence Systems • Powered by Gemini Vision & LangGraph logic</span>
+          <span>© 2026 Structural Intelligence Systems • Powered by team cyber dynamo & LangGraph logic</span>
         </div>
       </footer>
     </div>

@@ -61,7 +61,7 @@ export default function UploadStage({ onAnalyze, isAnalyzing }: UploadStageProps
     {
       id: 'detect',
       name: 'Detect Agent',
-      desc: 'Uses YOLO / Gemini Vision to segment crack contours and localize anomalies.',
+      desc: 'Uses YOLO to segment crack contours and localize anomalies.',
       icon: Shield,
       color: 'bg-indigo-500/10 text-indigo-400 border-indigo-500/30'
     },
