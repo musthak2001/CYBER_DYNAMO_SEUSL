@@ -8,6 +8,9 @@
 
 This project provides a state-of-the-art crack analysis platform designed to automate the inspection of structural surfaces. Utilizing advanced computer vision models and multi-agent orchestration, the system processes images, segments crack contours, and measures physical dimensions (width, length, area) to accurately assess structural integrity.
 
+> [!WARNING]
+> **🚧 Under Construction**: The database integration and cloud storage features are currently under active development. Some related functionalities may be limited or mocked in the current release.
+
 ## ✨ Key Features
 
 - **Automated Crack Detection**: Uses **YOLO** (Ultralytics) to accurately segment and localize crack contours.
@@ -15,6 +18,7 @@ This project provides a state-of-the-art crack analysis platform designed to aut
 - **Multi-Agent Orchestration**: Built upon LangGraph logic to seamlessly coordinate detection, measurement, thresholding, and reporting.
 - **High-Performance Dashboard**: A stunning, modern web interface built with **React**, **Vite**, and **Tailwind CSS**.
 - **Interactive Visualizations**: Review uploaded images, inspect bounding paths, and filter anomalies by severity (High, Medium, Low risk).
+- **Interactive AI Assistant**: An integrated chatbot powered by OpenAI, offering contextual, on-demand insights strictly related to structural engineering and your current analysis results.
 - **Automated Reporting**: Export comprehensive structural analysis results to PDF.
 
 ## 🛠️ Technology Stack
@@ -25,6 +29,7 @@ This project provides a state-of-the-art crack analysis platform designed to aut
 - Tailwind CSS
 - Recharts
 - Lucide Icons
+- OpenAI API (Chatbot Integration)
 
 **Core Detection & Agent Logic (Python Environment Option):**
 - YOLO (Ultralytics)

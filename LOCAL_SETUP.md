@@ -87,6 +87,8 @@ GEMINI_API_KEY="your-gemini-api-key"
 
 ### 4. Setup Azure SQL Database Tables
 
+> **🚧 UNDER CONSTRUCTION:** Please note that the Database and Cloud Integration features (Azure SQL & Blob Storage) are currently under construction and may not be fully operational. You can still run the UI and detection logic locally.
+
 Before running, execute this SQL script on your Azure SQL Database to prepare the tables:
 
 ```sql
@@ -427,13 +429,10 @@ Copy all the files from this workspace into a local folder:
 # 1. Install all required dependencies
 npm install
 
-# 2. Add your Gemini API Key to local environment variables
-# On macOS / Linux:
-export GEMINI_API_KEY="your-api-key-here"
-# On Windows (CMD):
-set GEMINI_API_KEY="your-api-key-here"
-# On Windows (PowerShell):
-$env:GEMINI_API_KEY="your-api-key-here"
+# 2. Configure Environment Variables
+# Create a `.env` file in the project root and add your API keys:
+# GEMINI_API_KEY="your-gemini-key-here" (Optional, for fallback analysis)
+# VITE_OPENAI_API_KEY="your-openai-key-here" (Required for the Interactive AI Chatbot)
 
 # 3. Spin up the integrated development server
 npm run dev
