@@ -65,6 +65,7 @@ We provide instructions for running the project locally in two modes: the Node.j
 6. Open `http://localhost:3000` in your browser.
 
 > 👉 **For the Full-Python ML Backend instructions and Database configuration, please refer to our detailed [Local Setup Blueprint](./LOCAL_SETUP.md).**
+>[📄 Crack Detection System PDF](https://github.com/musthak2001/CrackGuard_IDEALIZE/blob/main/crack%20detection%20system.pdf)
 
 ## 🛡️ License & Copyright
 
